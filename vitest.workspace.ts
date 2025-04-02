@@ -22,7 +22,13 @@ const config = [
       coverage: {
         all: true,
         include: ['{app,lib,components}/**/*'],
-        exclude: [...coverageConfigDefaults.exclude, '**/*.{stories,mock}.*'],
+        exclude: [
+          ...coverageConfigDefaults.exclude,
+          '**/*.{stories,mock}.*',
+          'next.config.ts',
+          'postcss.config.mjs',
+          'storybook-static/**/*',
+        ],
         provider: 'istanbul',
       },
     },
@@ -42,7 +48,12 @@ const config = [
       coverage: {
         all: true,
         include: ['app/**/*', 'lib/**/*'],
-        exclude: [...coverageConfigDefaults.exclude],
+        exclude: [
+          ...coverageConfigDefaults.exclude,
+          'next.config.ts',
+          'postcss.config.mjs',
+          'storybook-static/**/*',
+        ],
         provider: 'istanbul',
       },
     },
