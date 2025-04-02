@@ -1,3 +1,4 @@
+import react from '@vitejs/plugin-react';
 import { storybookTest } from '@storybook/experimental-addon-test/vitest-plugin';
 import { storybookNextJsPlugin } from '@storybook/experimental-nextjs-vite/vite-plugin';
 import { coverageConfigDefaults } from 'vitest/config';
@@ -27,12 +28,15 @@ const config = [
     },
   },
   {
-    name: 'node',
+    name: 'react',
+    plugins: [react()],
     test: {
-      include: ['**/*.test.{js,ts}'],
+      include: ['**/*.test.{js,jsx,ts,tsx}'],
 
-      // Explicitly set the environment to node
-      environment: 'node',
+      // Explicitly set the environment to jsdom
+      environment: 'jsdom',
+
+      setupFiles: ['vitest.node.setup.ts'],
 
       // Coverage configuration
       coverage: {
