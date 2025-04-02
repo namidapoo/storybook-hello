@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ParamsServerComponent from '../components/ParamsServerComponent';
+import ParamsServerComponent from '@/components/ParamsServerComponent';
 
 const meta = {
   title: 'Components/ParamsServerComponent',
@@ -49,8 +49,7 @@ export const WithPathParams: Story = {
       });
     }),
     searchParams: new Promise((resolve) => {
-      resolve({
-      });
+      resolve({});
     }),
   },
 };
@@ -58,9 +57,7 @@ export const WithPathParams: Story = {
 export const WithQueryParams: Story = {
   args: {
     params: new Promise((resolve) => {
-      resolve({
-      
-      });
+      resolve({});
     }),
     searchParams: new Promise((resolve) => {
       resolve({
@@ -86,4 +83,4 @@ export const WithBothParams: Story = {
       });
     }),
   },
-}; 
+};
