@@ -24,11 +24,6 @@ const config = [
         exclude: [...coverageConfigDefaults.exclude, '**/*.{stories,mock}.*'],
         provider: 'istanbul',
       },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, './'),
-        },
-      },
     },
   },
   {
