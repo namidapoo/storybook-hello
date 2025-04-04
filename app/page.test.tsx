@@ -1,14 +1,14 @@
-import { render, screen } from '@testing-library/react'
-import { describe, test, expect } from 'vitest'
-import Home from './page'
+import { render, screen } from '@testing-library/react';
+import { describe, test, expect } from 'vitest';
+import Home from './page';
 
 describe('Page', () => {
   test('renders the Next.js logo', () => {
     // Arrange
-    render(<Home />)
+    render(<Home />);
     // Act
-    const logo = screen.getByAltText('Next.js logo')
+    const logo = screen.getByAltText('Next.js logo');
     // Assert
-    expect(logo).toBeInTheDocument()
-  })
-})
+    expect(logo).toBeInTheDocument();
+  });
+});
