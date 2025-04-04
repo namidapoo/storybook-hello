@@ -9,6 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "storycap": "storycap --serverCmd \"npx http-server storybook-static -p 6006\" http://localhost:6006",
     "test": "vitest"
   },
   "dependencies": {
@@ -37,6 +38,7 @@
     "jsdom": "^26.0.0",
     "playwright": "^1.51.1",
     "storybook": "^8.6.7",
+    "storycap": "^5.0.1",
     "styled-jsx": "^5.1.6",
     "tailwindcss": "^4",
     "typescript": "^5",
