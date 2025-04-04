@@ -1,14 +1,15 @@
-import { defineConfig, coverageConfigDefaults } from 'vitest/config';
+import { defineConfig, coverageConfigDefaults } from "vitest/config";
 
 export default defineConfig({
   test: {
     coverage: {
-      provider: 'v8',
-      include: ['{app,components}/**/*'],
+      provider: "v8",
+      include: ["{app,components,stories}/**/*"],
       exclude: [
         ...coverageConfigDefaults.exclude,
-        '**/next.config.ts',
-        '**/*.{stories,mock}.*',
+        "**/next.config.ts",
+        "**/*.{stories,mock}.*",
+        "**/layout.tsx",
       ],
       all: true,
     },
