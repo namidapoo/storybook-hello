@@ -8,9 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "storycap": "storycap --serverCmd \"npx http-server storybook-static -p 6006\" http://localhost:6006",
-    "test": "vitest"
+    "storybook:build": "storybook build",
+    "test": "vitest",
+    "vrt:snapshot": "storycap --serverCmd \"npx http-server storybook-static -p 6006\" http://localhost:6006",
+    "vrt:run": "reg-suit run"
   },
   "dependencies": {
     "next": "15.2.3",
@@ -37,6 +38,10 @@
     "@vitest/coverage-v8": "^3.0.9",
     "jsdom": "^26.0.0",
     "playwright": "^1.51.1",
+    "reg-keygen-git-hash-plugin": "^0.14.3",
+    "reg-notify-github-plugin": "^0.14.4",
+    "reg-publish-s3-plugin": "^0.14.4",
+    "reg-suit": "^0.14.4",
     "storybook": "^8.6.7",
     "storycap": "^5.0.1",
     "styled-jsx": "^5.1.6",
