@@ -11,7 +11,7 @@
     "storybook:build": "storybook build",
     "test": "vitest",
     "vrt:snapshot": "storycap --serverCmd \"npx http-server storybook-static -p 6006\" http://localhost:6006",
-    "vrt:run": "reg-suit run"
+    "vrt:run": "pnpm dlx reg-suit run"
   },
   "dependencies": {
     "next": "15.2.3",
