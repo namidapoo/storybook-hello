@@ -42,7 +42,4 @@ jobs:
         run: pnpm run vrt:snapshot
 
       - name: Run reg-suit
-        run: pnpm run reg-suit
-
-      - name: Run vrt:run
-        run: pnpm run vrt:run
+        run: pnpm dlx reg-suit run
